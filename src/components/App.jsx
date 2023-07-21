@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { Component } from "react";
 import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';

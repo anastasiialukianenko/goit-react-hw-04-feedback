@@ -5,11 +5,10 @@ import { Option } from './FeedbackOptions.styled';
 
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-    const optionsName = Object.keys(options);
     return (
     <div>
-      {optionsName.map((option) => (
-        <Option key={option} type="button" name={option} onClick={onLeaveFeedback}>
+      {options.map((option) => (
+        <Option key={option} type="button" name={option} onClick={() => onLeaveFeedback(option)}>
           {option}
         </Option>
       ))}
@@ -19,5 +18,5 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 
 FeedbackOptions.propTypes = {
     onLeaveFeedback: PropTypes.func.isRequired,
-    options: PropTypes.object.isRequired,
+    options: PropTypes.array.isRequired,
 }
